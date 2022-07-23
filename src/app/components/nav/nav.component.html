@@ -1,0 +1,23 @@
+<nav>
+  <a href="#" class="logo">GameDB</a>
+  <div class="search-container">
+    <img src="assets/search-logo.svg" alt="search" class="search-logo" />
+    <input class="search-input" type="search" placeholder="Search For Games" />
+  </div>
+  <div (click)="this.toggleNavbar = !this.toggleNavbar" class="button-wrapper">
+    <div class="toggle-button" [ngClass]="{ active: toggleNavbar }"></div>
+  </div>
+  <div
+    class="backdrop"
+    [ngClass]="{ open: toggleNavbar }"
+    (click)="this.toggleNavbar = false"
+  ></div>
+  <ul class="nav-links" [ngClass]="{ open: toggleNavbar }">
+    <li class="nav-link">
+      <a href="#">LOG IN</a>
+    </li>
+    <li class="nav-link">
+      <a href="#">SIGN UP</a>
+    </li>
+  </ul>
+</nav>
